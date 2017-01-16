@@ -57,11 +57,11 @@
             <artifactId>seaglasslookandfeel</artifactId>
             <version>0.2.1</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.devzendo</groupId>
             <artifactId>Quaqua</artifactId>
             <version>9.1</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.avaje.ebeanorm</groupId>
             <artifactId>avaje-ebeanorm</artifactId>

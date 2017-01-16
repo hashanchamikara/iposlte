@@ -5,7 +5,6 @@
  */
 package com.isimple.intelijpos_lite.app;
 
-import ch.randelshofer.quaqua.QuaquaLookAndFeel;
 import com.isimple.intelijpos_lite.ui.main.UIHome;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,7 +22,7 @@ public class Application {
 
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(new QuaquaLookAndFeel());
+            UIManager.setLookAndFeel(UIManager.getLookAndFeel());
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
         }

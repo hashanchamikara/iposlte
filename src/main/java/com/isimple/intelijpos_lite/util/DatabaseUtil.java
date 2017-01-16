@@ -16,9 +16,9 @@ public class DatabaseUtil {
     static {
         DataSourceConfig ds = new DataSourceConfig();
         ds.setDriver("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/iposLite");
+        ds.setUrl("jdbc:mysql://localhost:3306/iposlitedb");
         ds.setUsername("root");
-        ds.setPassword("hc@123");
+        ds.setPassword("");
         ServerConfig sc = new ServerConfig();
         sc.setName("defult");
         sc.setDataSourceConfig(ds);
