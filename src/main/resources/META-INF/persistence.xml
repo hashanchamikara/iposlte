@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.isimple.intelijpos_lite_intelijPOS-LTE_jar_1.1PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.isimple.intelijpos_lite.models.User</class>
+    <class>com.isimple.intelijpos_lite.models.GrnRetrunDetail</class>
+    <class>com.isimple.intelijpos_lite.models.InvoiceReturnDetail</class>
+    <class>com.isimple.intelijpos_lite.models.Invoice</class>
+    <class>com.isimple.intelijpos_lite.models.InvoiceReturn</class>
+    <class>com.isimple.intelijpos_lite.models.InvoiceDetail</class>
+    <class>com.isimple.intelijpos_lite.models.LedgerDetail</class>
+    <class>com.isimple.intelijpos_lite.models.Stock</class>
+    <class>com.isimple.intelijpos_lite.models.Supplier</class>
+    <class>com.isimple.intelijpos_lite.models.GrnDetail</class>
+    <class>com.isimple.intelijpos_lite.models.Receipt</class>
+    <class>com.isimple.intelijpos_lite.models.Ledger</class>
+    <class>com.isimple.intelijpos_lite.models.Item</class>
+    <class>com.isimple.intelijpos_lite.models.GrnReturn</class>
+    <class>com.isimple.intelijpos_lite.models.Grn</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/iposLite?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="hc@123"/>
+    </properties>
+  </persistence-unit>
+</persistence>

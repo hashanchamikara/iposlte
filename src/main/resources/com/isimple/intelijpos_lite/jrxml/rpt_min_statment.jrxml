@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-07-30T23:53:53 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bltharmalinvo" pageWidth="216" pageHeight="842" columnWidth="176" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Error" uuid="765ca7da-f300-4006-b03d-5cef60816274">
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <parameter name="startTime" class="java.lang.String"/>
+    <parameter name="Amount" class="java.lang.String"/>
+    <parameter name="user" class="java.lang.String"/>
+    <parameter name="endTime" class="java.lang.String"/>
+    <queryString>
+		<![CDATA[]]>
+    </queryString>
+    <field name="index" class="java.lang.String"/>
+    <field name="invoice" class="java.lang.String"/>
+    <field name="date" class="java.util.Date"/>
+    <field name="value" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="205">
+            <image hAlign="Center" vAlign="Middle">
+                <reportElement x="0" y="6" width="176" height="56" uuid="c786e59a-ad92-4e67-b2b9-e2e60deb5e27"/>
+                <imageExpression><![CDATA["ic_logo_print.png"]]></imageExpression>
+            </image>
+            <line>
+                <reportElement x="0" y="180" width="176" height="1" uuid="d0634601-34c1-41b5-b923-b60477a8b5df"/>
+            </line>
+            <staticText>
+                <reportElement x="1" y="63" width="176" height="47" uuid="8d7fd87a-3fea-4b11-a42f-2ffb0b96ad14"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[S A F F R O N  R O B E S
+Galle Road, Hikkaduwa,
+Sri Lanka.
+srilanka@saffronrobes.com
+www.saffronrobes.com
++00 94 771 226 313]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="180" width="110" height="20" uuid="41da806d-aa6d-4b66-a1f2-3e250ca5b86c"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Invoice]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="115" y="180" width="60" height="20" uuid="dc615504-3a72-4ee7-9594-18f8f31cbe0c"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                <text><![CDATA[Value]]></text>
+            </staticText>
+            <line>
+                <reportElement x="0" y="202" width="176" height="1" uuid="63dea0d9-851b-47f0-a118-721a554dcb29"/>
+            </line>
+            <staticText>
+                <reportElement x="0" y="114" width="176" height="20" uuid="44e9408c-d6b6-4dce-9b32-441828348152"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[MINI STATEMENT]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="137" width="176" height="17" uuid="34164cb4-4d03-4918-b0f4-eae3eafe8d0a"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["START :"+$P{startTime}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="156" width="176" height="17" uuid="d621257b-60a7-41c8-9e0c-9feb06070e70"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["END :"+$P{endTime}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <detail>
+        <band height="17" splitType="Stretch">
+            <textField isStretchWithOverflow="true">
+                <reportElement x="90" y="2" width="86" height="13" uuid="a8918d12-5a18-47a2-bdb1-3df548b52944"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+            </textField>
+            <textField pattern="MMM d">
+                <reportElement x="21" y="2" width="32" height="13" uuid="79e3ca07-bb64-456b-b853-192eef953ddb"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="2" width="20" height="13" uuid="2c4d4662-d670-48c6-ae3d-a321b175ba18"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{index}]]></textFieldExpression>
+            </textField>
+            <textField pattern="">
+                <reportElement x="53" y="2" width="37" height="13" uuid="86bddec0-3158-4dd6-a551-f32fdcf6c425"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{invoice}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <summary>
+        <band height="86" splitType="Stretch">
+            <line>
+                <reportElement x="0" y="2" width="176" height="1" uuid="db6a309b-dfd8-49d6-ac87-6c18794dd4f9"/>
+            </line>
+            <textField>
+                <reportElement x="65" y="7" width="110" height="18" uuid="92f33924-845c-4851-a913-0c008e7cfa0f"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Amount}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="7" width="64" height="18" uuid="251f106c-8754-4edd-a1af-8b74da71f4bb"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="SansSerif" isBold="false"/>
+                </textElement>
+                <text><![CDATA[Amount]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="1" y="28" width="52" height="18" uuid="b837826a-065b-4a41-a158-0585ee07380a"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="SansSerif" isBold="false"/>
+                </textElement>
+                <text><![CDATA[User]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="64" y="28" width="110" height="18" uuid="62095e05-be03-454b-ac58-53dd1e86132e"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="SansSerif"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="0" y="77" width="176" height="1" uuid="8ef18c4e-4ebf-449f-88b8-aa32a5ffc492"/>
+            </line>
+            <staticText>
+                <reportElement x="0" y="52" width="176" height="18" uuid="11079b05-ddce-4a0d-a956-50eac75df9f7"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" isBold="false"/>
+                </textElement>
+                <text><![CDATA[END STATEMENT]]></text>
+            </staticText>
+        </band>
+    </summary>
+</jasperReport>
